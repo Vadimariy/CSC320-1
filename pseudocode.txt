@@ -1,0 +1,15 @@
+START
+
+SET firstName to "John"
+SET lastName to "Doe"
+SET streetAddress to "123 Main Street"
+SET city to "Denver"
+SET zipCode to "80202"
+
+PRINT firstName
+PRINT lastName
+PRINT streetAddress
+PRINT city
+PRINT zipCode
+
+END
