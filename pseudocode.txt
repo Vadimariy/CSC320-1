@@ -1,15 +1,26 @@
 START
 
-SET firstName to "John"
-SET lastName to "Doe"
-SET streetAddress to "123 Main Street"
-SET city to "Denver"
-SET zipCode to "80202"
+DECLARE weeklyIncome as double
+DECLARE taxRate as double
+DECLARE taxWithholding as double
 
-PRINT firstName
-PRINT lastName
-PRINT streetAddress
-PRINT city
-PRINT zipCode
+PROMPT user to enter weekly income
+READ weeklyIncome
+
+IF weeklyIncome < 500
+    taxRate = 0.10
+ELSE IF weeklyIncome >= 500 AND weeklyIncome < 1500
+    taxRate = 0.15
+ELSE IF weeklyIncome >= 1500 AND weeklyIncome < 2500
+    taxRate = 0.20
+ELSE
+    taxRate = 0.30
+END IF
+
+taxWithholding = weeklyIncome * taxRate
+
+DISPLAY weekly income
+DISPLAY tax withholding
+DISPLAY take-home pay (weeklyIncome - taxWithholding)
 
 END
