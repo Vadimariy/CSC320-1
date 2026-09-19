@@ -1,0 +1,38 @@
+
+BEGIN
+    CREATE an array of days:
+        Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+
+    CREATE empty list for temperatures
+
+    FOR each day in the week DO
+        DISPLAY: "Enter the average temperature for [day]: "
+        READ temperature from user
+        STORE temperature in temperatures list
+    END FOR
+
+    DISPLAY: "Enter a day of the week, or 'week' for all days: "
+    READ selection from user
+
+    IF selection is equal to "week" THEN
+        FOR each day in the week DO
+            DISPLAY day and its temperature
+            ADD temperature to total
+        END FOR
+
+        CALCULATE weekly average = total / number of days
+        DISPLAY weekly average
+    ELSE
+        FOR each day in the week DO
+            IF the selected day matches the current day (ignoring case) THEN
+                DISPLAY the day and its temperature
+                SET found = true
+                BREAK out of loop
+            END IF
+        END FOR
+
+        IF no matching day was found THEN
+            DISPLAY "Invalid day."
+        END IF
+    END IF
+END
