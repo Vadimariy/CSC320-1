@@ -1,0 +1,78 @@
+AUTOMOBILE CLASS
+
+Define private fields:
+    make as String
+    model as String
+    color as String
+    year as integer
+    mileage as integer
+
+Default constructor:
+    Try to initialize the text fields to empty strings and numbers to zero
+    Catch an error and report that initialization failed
+
+Parameterized constructor(make, model, color, year, mileage):
+    Try to validate the vehicle information
+    If valid, assign the supplied values to the fields
+    Catch an error and report that construction failed
+
+Method addNewVehicle(make, model, color, year, mileage):
+    Try to validate the supplied vehicle information
+    Assign the values to the fields
+    Return a success message
+    Catch an error and return a failure message
+
+Method listVehicleInformation():
+    Try to return a string array containing make, model, color, year, and mileage
+    Catch an error and return a string array containing a failure message
+
+Method removeVehicle():
+    Try to clear the text fields and set the numeric fields to zero
+    Return a success message
+    Catch an error and return a failure message
+
+Method updateVehicleAttributes(make, model, color, year, mileage):
+    Try to validate the supplied information
+    Replace the current field values with the supplied values
+    Return a success message
+    Catch an error and return a failure message
+
+Validation helper:
+    Reject a null or blank make, model, or color
+    Reject a year less than or equal to zero
+    Reject a mileage less than zero
+
+
+AUTOMOBILE INVENTORY MAIN PROGRAM
+
+Try:
+    Create a Scanner for console input
+    Create an Automobile using the parameterized constructor
+    List and print the initial vehicle information
+
+    Remove the vehicle
+    Print the remove method's result
+
+    Prompt for make, model, color, year, and mileage
+    Add the new vehicle
+    Print the add method's result
+    List and print the new vehicle information
+
+    Prompt for updated make, model, color, year, and mileage
+    Update the vehicle attributes
+    Print the update method's result
+    List and print the updated vehicle information
+
+    Ask whether the user wants to print the information to a file (Y or N)
+    If the response is Y:
+        Create the output directory if it does not exist
+        Write the vehicle information to C:\Temp\Autos.txt
+        Print a success or failure message
+    Otherwise, if the response is N:
+        Print that no file will be printed
+    Otherwise:
+        Print that the response was invalid and no file will be printed
+
+Catch an error:
+    Print an error message to the console
+Close the Scanner
